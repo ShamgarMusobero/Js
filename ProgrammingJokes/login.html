@@ -1,0 +1,71 @@
+<?php
+include('action.php');
+if(isset($_SESSION['login_user'])){
+header("location: home.php");
+}
+?>
+
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+  <title>ProgrammingJokes</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->         
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <title></title>
+  </head>
+  <body>
+
+   
+  <header>
+    <div class="container center-div shadow">
+        <div class="heading text-center mb-5 text-uppercase text-white"> Login</div>
+          <div class="container row d-flex flex-row justify-content-center mb-5">
+            <div class="admin-form shadow p-2">
+              <form method="post" action="">
+                            <div class="form-group">
+                               <label> Name</label>
+                                <input type="text" id="name" name="username" placeholder="Username" class="form-control" autocomplete="off">
+                            </div>
+                             <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" id="password" autocomplete="off" placeholder="Password" name="password" class="form-control">
+                            </div>
+
+                  <input type="submit" name="submit" class="btn btn-success" value="Login">
+                  <span><?php echo $error; ?></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+	  
+	    
+	 
+  
+  </header>
+
+  </body>
+</html>
